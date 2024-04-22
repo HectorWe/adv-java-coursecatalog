@@ -38,7 +38,4 @@ public abstract class Course{
         this.credits = credits;
     }
 
-    public abstract String getPrerequisites();
-
-    public abstract void setPrerequisites(String prerequisites);
 }

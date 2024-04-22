@@ -14,14 +14,16 @@ public class IntroJavaCourse extends Course {
         super(courseName, courseNumber);
     }
 
-    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
-    @Override
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;
+    }
+
+    public String toString() {
+        return String.format("\nCourse: %s\n- Number: %s\n- Credits: %s\n- Prerequisites: %s", getCourseName(), getCourseNumber(), getCredits(), getPrerequisites());
     }
 
 }

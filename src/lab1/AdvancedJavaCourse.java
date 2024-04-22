@@ -16,12 +16,10 @@ public class AdvancedJavaCourse extends Course {
         super(courseName, courseNumber);
     }
 
-    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
-    @Override
     public void setPrerequisites(String prerequisites) {
         if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -31,4 +29,8 @@ public class AdvancedJavaCourse extends Course {
         this.prerequisites = prerequisites;
     }
 
+    public String toString() {
+
+        return String.format("\nCourse: %s\n- Number: %s\n- Credits: %s\n- Prerequisites: %s", getCourseName(), getCourseNumber(), getCredits(), getPrerequisites());
+    }
 }
